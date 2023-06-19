@@ -2,15 +2,15 @@ function rowWeights(array){
     let myArr1 = [];
     let myArr2 = [];
     for(let i = 0; i < array.length; i++){
-        if(i % 2 == 0){
+        if(i % 2 == 0){ // sort into 2 odd/even arrays
             myArr1.push(array[i])
         } else {
             myArr2.push(array[i])
         }
-    }
+    } // sum the arrays into totals
     myArr1 = myArr1.reduce((partialSum, a) => partialSum + a, 0);
     myArr2 = myArr2.reduce((partialSum, a) => partialSum + a, 0);
-    return [myArr1, myArr2]
+    return [myArr1, myArr2] // return both totals
 }
 
 console.log(rowWeights([80])); // [80,0]
