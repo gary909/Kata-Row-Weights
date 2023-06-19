@@ -1,5 +1,16 @@
 function rowWeights(array){
-    //your code here
+    let myArr1 = [];
+    let myArr2 = [];
+    for(let i = 0; i < array.length; i++){
+        if(i % 2 == 0){
+            myArr1.push(array[i])
+        } else {
+            myArr2.push(array[i])
+        }
+    }
+    myArr1 = myArr1.reduce((partialSum, a) => partialSum + a, 0);
+    myArr2 = myArr2.reduce((partialSum, a) => partialSum + a, 0);
+    return [myArr1, myArr2]
 }
 
 console.log(rowWeights([80])); // [80,0]
